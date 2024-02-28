@@ -1,3 +1,7 @@
-.your-order .container {
+.your-order {
   background-color: yellow;
+}
+
+.container {
+  outline: 1px solid wheat;
 }

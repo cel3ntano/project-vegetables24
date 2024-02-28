@@ -1,3 +1,7 @@
-.vegetables .container {
+.vegetables {
   background-color: green;
+}
+
+.container {
+  outline: 1px solid wheat;
 }

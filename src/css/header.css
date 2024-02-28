@@ -1,3 +1,8 @@
-.header .container {
-  background-color: cyan;
+.header.section {
+  background-color: rgb(115, 115, 239);
+  padding: 0;
+}
+
+.container {
+  outline: 1px solid wheat;
 }

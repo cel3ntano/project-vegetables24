@@ -1,3 +1,7 @@
-.how-it-works .container {
+.how-it-works {
   background-color: violet;
+}
+
+.container {
+  outline: 1px solid wheat;
 }

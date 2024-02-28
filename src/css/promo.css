@@ -1,3 +1,7 @@
-.promo .container {
+.promo {
   background-color: tomato;
+}
+
+.container {
+  outline: 1px solid wheat;
 }

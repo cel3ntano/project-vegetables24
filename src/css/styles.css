@@ -45,3 +45,15 @@
     margin: 0 auto;
   }
 }
+
+.section {
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+}

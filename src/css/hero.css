@@ -1,3 +1,18 @@
-.hero .container {
+.hero.section {
   background-color: olive;
+  padding: 100px 0 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero.section {
+    margin: 0 auto;
+    padding: 122px 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero.section {
+    margin: 0 auto;
+    padding: 0;
+  }
 }
