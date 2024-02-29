@@ -2,6 +2,116 @@
   background-color: #7a3145;
 }
 
-.vegetables .container {
-  /* outline: 1px solid wheat; */
+.vegetables-title {
+  color: #fbfbfb;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  max-width: 335px;
+}
+
+.vegetables-title-span {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.vegetables-text {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 40px;
+  max-width: 335px;
+}
+
+.vegetables-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.vegetables-item {
+  max-width: 334px;
+  border-radius: 40px;
+  background: #fbfbfb;
+  padding: 32px 26px;
+}
+
+.wrap-vegetables-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.wrap-vegetables-text-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.vegetables-title-card {
+  color: #7a3145;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.015em;
+}
+
+.vegetables-text-card {
+  color: #141414;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+/* ===================TABLET============================ */
+
+@media screen and (min-width: 768px) {
+  .vegetables-title {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    max-width: 508px;
+    margin-bottom: 25px;
+  }
+
+  .vegetables-text {
+    font-size: 16px;
+    line-height: 1.25;
+    max-width: 626px;
+    margin-bottom: 50px;
+  }
+
+  .vegetables-list {
+    row-gap: 28px;
+    column-gap: 20px;
+  }
+
+  .vegetables-item {
+    max-width: 342px;
+    padding: 32px 30px;
+  }
+
+  .wrap-vegetables-card {
+    gap: 10px;
+  }
+}
+
+/* ===================DESKTOP======================== */
+
+@media screen and (min-width: 1280px) {
+  .vegetables-list {
+    column-gap: 21px;
+  }
+
+  .vegetables-item {
+    max-width: 346px;
+    padding: 32px;
+  }
 }
