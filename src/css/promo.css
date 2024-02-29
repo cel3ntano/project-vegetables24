@@ -1,5 +1,6 @@
 .promo.section {
   background: #fbfbfb;
+  background: url(../img/hero/hero-mob-1x.jpg);
 }
 
 .promo.section .container {
@@ -68,3 +69,4 @@
     line-height: 1.05;
   }
 }
+/* test image path */
