@@ -1,8 +1,12 @@
+.promo.section {
+  background: #fbfbfb;
+}
+
 .promo.section .container {
   padding: 0 10px;
 }
 
-.promo-text-fill {
+main .promo-text-fill {
   display: block;
   padding: 3px 10px;
   color: #fbfbfb;
