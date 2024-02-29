@@ -1,7 +1,70 @@
-.promo {
-  background-color: tomato;
+.promo.section {
+  background: #fbfbfb;
 }
 
-.container {
-  outline: 1px solid wheat;
+.promo.section .container {
+  padding: 0 10px;
+}
+
+.promo-text-fill {
+  display: block;
+  padding: 3px 10px;
+  color: #fbfbfb;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #576f35;
+}
+
+.promo-text {
+  display: block;
+  padding: 0 10px;
+  color: #141414;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .promo.section .container {
+    padding: 0 16px;
+  }
+
+  .promo-text-fill {
+    padding: 8px 16px;
+    font-size: 64px;
+    line-height: 1.09;
+  }
+
+  .promo-text {
+    padding: 0 16px;
+    font-size: 64px;
+    line-height: 1.09;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .promo.section .container {
+    padding: 0 100px;
+  }
+
+  .promo-text-fill {
+    display: inline-block;
+    padding: 0 13px;
+    font-size: 76px;
+    line-height: 1.05;
+  }
+
+  .promo-text {
+    display: inline-block;
+    display: inline;
+    padding: 0 13px;
+    font-size: 76px;
+    line-height: 1.05;
+  }
 }

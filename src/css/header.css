@@ -3,6 +3,6 @@
   padding: 0;
 }
 
-.container {
-  outline: 1px solid wheat;
+.header .container {
+  /* outline: 1px solid wheat; */
 }
