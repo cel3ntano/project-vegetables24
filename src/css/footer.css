@@ -16,27 +16,28 @@
 }
 
 .footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-bottom: 80px;
 }
 
 .footer-logo {
   display: flex;
-  width: 168px;
   align-items: center;
   gap: 4px;
   margin-bottom: 14px;
 }
 
-.footer-text {
-  margin-bottom: 40px;
+.icon.desk-tab {
+  display: none;
 }
 
-.footer-nav {
-  width: 155px;
-}
-
-.footer-nav-list {
-  margin-bottom: 40px;
+.footer-second-div {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .footer-nav-item {
@@ -50,13 +51,6 @@
   padding-bottom: 14px;
 }
 
-.footer-contacts {
-  width: 215px;
-}
-
-/* .footer-contacts-list {
-} */
-
 .footer-contacts-item {
   font-weight: 600;
   letter-spacing: -0.21px;
@@ -66,18 +60,15 @@
   padding-bottom: 14px;
 }
 
-.footer-contacts-address {
-  width: 179px;
-}
-
 .footer-happyend {
   display: flex;
   justify-content: space-between;
 }
 
 .footer-happyend-list {
-  display: inline-flex;
-  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
 }
 
 .footer-happyend-item {
@@ -95,9 +86,74 @@
 }
 
 @media screen and (min-width: 768px) {
-  .footer.section {
-    margin: 0 auto;
-    padding: 32px 0;
+  .footer {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .footer-container {
+    max-width: 768px;
+    padding: 32px;
+  }
+
+  .footer-info {
+    margin-bottom: 100px;
+    flex-direction: row;
+    gap: 224px;
+  }
+
+  .footer-first-div {
+    width: 265px;
+  }
+
+  .footer-logo {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .icon.desk-tab {
+    display: block;
+  }
+
+  .icon.mob {
+    display: none;
+  }
+
+  .footer-second-div {
+    gap: 64px;
+  }
+
+  .footer-nav-item {
+    font-size: 32px;
+    letter-spacing: -0.48px;
+  }
+
+  .footer-nav-item:not(:last-child) {
+    padding-bottom: 25px;
+  }
+
+  .footer-contacts-item {
+    font-size: 18px;
+    line-height: 1.11;
+    letter-spacing: -0.27px;
+  }
+
+  .footer-contacts-item:not(:last-child) {
+    padding-bottom: 25px;
+  }
+
+  .footer-happyend-item {
+    color: rgba(251, 251, 251, 0.5);
+    font-size: 18px;
+    line-height: 1.11;
+    letter-spacing: -0.27px;
+  }
+
+  .footer-happyend-copyrights {
+    color: rgba(251, 251, 251, 0.5);
+    font-size: 18px;
+    line-height: 1.11;
+    letter-spacing: -0.27px;
   }
 }
 
