@@ -1,13 +1,12 @@
-body {
+/*! Footer */
+
+.footer {
   color: #fbfbfb;
-  font-family: 'Inter Tight', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.28;
 }
-
-/*! Footer */
 
 .footer-container {
   background-color: #7a3145;
@@ -41,12 +40,9 @@ body {
 }
 
 .footer-nav-item {
-  color: #fbfbfb;
-  font-family: 'Inter Tight';
   font-size: 28px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 28px; /* 100% */
+  line-height: 1;
   letter-spacing: -0.42px;
 }
 
@@ -62,12 +58,7 @@ body {
 } */
 
 .footer-contacts-item {
-  color: #fbfbfb;
-  font-family: 'Inter Tight';
-  font-size: 14px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 18px; /* 128.571% */
   letter-spacing: -0.21px;
 }
 
@@ -91,21 +82,15 @@ body {
 
 .footer-happyend-item {
   color: rgba(251, 251, 251, 0.5);
-  font-family: 'Inter Tight';
   font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px; /* 133.333% */
+  line-height: 1.33;
   letter-spacing: -0.18px;
 }
 
 .footer-happyend-copyrights {
   color: rgba(251, 251, 251, 0.5);
-  font-family: 'Inter Tight';
   font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px; /* 116.667% */
+  line-height: 1.16;
   letter-spacing: -0.18px;
 }
 
