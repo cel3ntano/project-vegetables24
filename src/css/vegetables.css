@@ -37,18 +37,8 @@
   padding: 32px 26px;
 }
 
-.wrap-vegetables-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-}
-
 .wrap-vegetables-text-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .vegetables-title-card {
@@ -57,6 +47,7 @@
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.015em;
+  margin-bottom: 12px;
 }
 
 .vegetables-text-card {
@@ -98,8 +89,8 @@
     padding: 32px 30px;
   }
 
-  .wrap-vegetables-card {
-    gap: 10px;
+  .wrap-vegetables-text-card {
+    margin-bottom: 10px;
   }
 }
 
