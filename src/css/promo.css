@@ -1,12 +1,18 @@
 .promo.section {
+  /* background: #fbfbfb; */
+  padding: 0;
+}
+
+.promo .container {
+  padding: 80px 10px;
   background: #fbfbfb;
 }
 
-.promo.section .container {
+/* .promo.section .container {
   padding: 0 10px;
-}
+} */
 
-.promo-text-fill {
+main .promo-text-fill {
   display: block;
   padding: 3px 10px;
   color: #fbfbfb;
@@ -31,8 +37,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .promo.section .container {
+  /* .promo.section .container {
     padding: 0 16px;
+  } */
+
+  .promo .container {
+    padding: 100px 16px;
   }
 
   .promo-text-fill {
@@ -49,8 +59,12 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .promo.section .container {
+  /* .promo.section .container {
     padding: 0 100px;
+  } */
+
+  .promo .container {
+    padding: 100px;
   }
 
   .promo-text-fill {
