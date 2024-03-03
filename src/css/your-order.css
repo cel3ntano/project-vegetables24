@@ -1,7 +1,138 @@
 .your-order {
-  background-color: yellow;
+  background-color: #7a3145;
 }
-
 .your-order .container {
   /* outline: 1px solid wheat; */
+}
+/* ======Title====== */
+.your-order-title {
+  color: #fbfbfb;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+.order-title-part {
+  color: rgba(251, 251, 251, 0.3);
+}
+.your-order-text {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 40px;
+}
+/* ======Form====== */
+.order-form-container {
+  width: 335px;
+  min-height: 533px;
+  border-radius: 30px;
+  background-color: #fbfbfb;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+}
+.order-form-title {
+  color: #141414;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  width: 270px;
+}
+.form-title-first-part {
+  color: #7a3145;
+}
+.form-title-second-part {
+  color: #576f35;
+}
+.your-order-form {
+}
+.input-field {
+  margin-bottom: 15px;
+}
+.order-label {
+}
+.order-input {
+  width: 100%;
+  height: 46px;
+  border-radius: 30px;
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  padding-left: 16px;
+  background-color: transparent;
+}
+.order-input::placeholder {
+  color: #141414;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+.textarea-field {
+  margin-bottom: 20px;
+}
+.order-textarea {
+  vertical-align: bottom;
+  width: 100%;
+  height: 91px;
+  padding: 14px 16px;
+  border-radius: 15px;
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  resize: none;
+  background-color: transparent;
+}
+.order-textarea::placeholder {
+  color: #141414;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+.your-order-btn {
+  width: 295px;
+  height: 50px;
+  background-color: #576f35;
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 129px;
+}
+/* ======Socials====== */
+.order-social-container {
+  width: 335px;
+  min-height: 465px;
+  background-color: #576f35;
+  border-radius: 30px;
+  padding: 40px 20px;
+}
+.your-order-image {
+  margin-bottom: 20px;
+}
+.order-social-text {
+  color: rgba(251, 251, 251, 0.5);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.015px;
+  margin-bottom: 14px;
+}
+.order-social-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.order-social-item {
+  color: #fbfbfb;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
 }

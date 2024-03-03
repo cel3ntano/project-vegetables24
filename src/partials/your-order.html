@@ -1,5 +1,100 @@
 <section class="your-order section">
   <div class="container">
-    <p>Your order: Maksym</p>
+    <h2 class="your-order-title">
+      Fresh <span class="order-title-part">Harvest</span> Box has got you
+      covered
+    </h2>
+    <p class="your-order-text">
+      Our boxes are packed with delicious, nutritious vegetables, perfect for
+      anyone looking to eat healthier or support local farmers. Order your box
+      today and start enjoying the best that nature has to offer!
+    </p>
+    <div class="order-form-container">
+      <p class="order-form-title">
+        Ordering <span class="form-title-first-part">from us</span> is quick and
+        easy! Fill out
+        <span class="form-title-second-part">the form</span> below and we will
+        contact you !
+      </p>
+      <form class="your-order-form">
+        <div class="input-field">
+          <label class="order-label">
+            <input
+              type="text"
+              name="Full name"
+              class="order-input"
+              placeholder="Full Name"
+            />
+          </label>
+        </div>
+        <div class="input-field">
+          <label class="order-label">
+            <input
+              type="email"
+              name="Email"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+              class="order-input"
+              placeholder="Email"
+              required
+            />
+          </label>
+        </div>
+        <div class="textarea-field">
+          <label>
+            <textarea
+              name="Comment"
+              class="order-textarea"
+              placeholder="Comment"
+            ></textarea>
+          </label>
+        </div>
+        <button type="submit" class="your-order-btn">Send</button>
+      </form>
+    </div>
+    <div class="order-social-container">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./img/your-order/order-desk-1x.jpg 1x,
+            ./img/your-order/order-desk-2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./img/your-order/order-tab-1x.jpg 1x,
+            ./img/your-order/order-tab-2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 375px)"
+          srcset="
+            ./img/your-order/order-mob-1x.jpg 1x,
+            ./img/your-order/order-mob-2x.jpg 2x
+          "
+        />
+        <img
+          class="your-order-image"
+          src="./img/your-order/order-mob-1x.jpg"
+          alt="fruit in a bowl"
+          width="295"
+        />
+      </picture>
+      <p class="order-social-text">Follow us on our social networks:</p>
+      <ul class="order-social-list">
+        <li class="order-social-item">
+          <a href="https://www.instagram.com/goitclub/">instagram</a>
+        </li>
+        <li class="order-social-item">/</li>
+        <li class="order-social-item">
+          <a href="https://www.facebook.com/goITclub/">facebook</a>
+        </li>
+        <li class="order-social-item">/</li>
+        <li class="order-social-item">
+          <a href="https://www.youtube.com/c/GoIT">youtube</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
