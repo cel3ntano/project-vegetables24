@@ -144,6 +144,12 @@
 
 /* =============MEDIA==================== */
 
+@media screen and (max-width: 374px) {
+  .mob-menu {
+    padding: 240px 82px 40px 82px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header .container {
     padding-top: 32px;
