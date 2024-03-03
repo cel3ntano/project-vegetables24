@@ -2,7 +2,11 @@
 .hero.section {
   padding: 0;
   background: #576F35;
-  background-image: url(/img/hero/hero-mob-1x.jpg) ;
+  background-image: linear-gradient(to bottom,
+      #576f35 0,
+      #576f35 calc(100% - 370px),
+      rgba(20, 20, 20, 0.2) calc(100% - 370px),
+      rgba(20, 20, 20, 0.2) 100%), url(/img/hero/hero-mob-1x.jpg);
   max-width: 375px;
   height: 712px;
   background-repeat: no-repeat;
@@ -25,47 +29,50 @@
     /* padding: 122px 0 0 0; */
     max-width: 768px;
     height: 902px;
-    background-image: url(/img/hero/hero-tab-1x.jpg);
+    background-image: linear-gradient(to bottom,
+        #576f35 0,
+        #576f35 calc(100% - 539px),
+        rgba(20, 20, 20, 0.2) calc(100% - 539px),
+        rgba(20, 20, 20, 0.2) 100%), url(/img/hero/hero-tab-1x.jpg);
     
   }
     @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
       .hero.section {
-        background-image: url(/img/hero/hero-tab-2x.jpg);
+        background-image: linear-gradient(to bottom,
+            #576f35 0,
+            #576f35 calc(100% - 539px),
+            rgba(20, 20, 20, 0.2) calc(100% - 539px),
+            rgba(20, 20, 20, 0.2) 100%), url(/img/hero/hero-tab-2x.jpg);
       }
     }
 }
 
 @media screen and (min-width: 1280px) {
   .hero.section {
-    margin: 0 auto;
-    padding: 0;
     max-width: 1280px;
     height: 800px;
-    background-image: url(/img/hero/hero-desk-1x.jpg);
+    background-image: linear-gradient(to right,
+          #576f35 0,
+          #576f35 calc(100% - 650px),
+          rgba(20, 20, 20, 0.2) calc(100% - 650px),
+          rgba(20, 20, 20, 0.2) 100%),
+        url(/img/hero/hero-desk-1x.jpg);
     background-position: right;
   }
     @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
       .hero.section {
-        background-image: url(/img/hero/hero-desk-2x.jpg);
+        background-image: linear-gradient(to right,
+            #576f35 0,
+            #576f35 calc(100% - 650px),
+            rgba(20, 20, 20, 0.2) calc(100% - 650px),
+            rgba(20, 20, 20, 0.2) 100%),
+          url(/img/hero/hero-desk-2x.jpg);
       }
     }
-}
-
-.hero-container {}
-
-@media screen and (min-width: 1280px) {
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    gap: 128px;
-    width: 502px;
-    
-    
-  }
 }
 
 .hero-title {
@@ -82,17 +89,15 @@
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 76px;
-    min-width: 768px;
-    max-width: 1279px;
-    /* margin-bottom: 25px; */
+    margin-bottom: 25px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero-title {
     width: 502px;
-    margin-top: 172px;
-    margin-bottom: 0;
+    padding-top: 238px;
+    margin-bottom: 128px;
     text-align: left;
   }
 }
@@ -102,7 +107,6 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.28;
-    width: 335px;
     text-align: left;
 }
 
@@ -117,7 +121,5 @@
 @media screen and (min-width: 1280px) {
   .hero-text {
     width: 472px;
-    text-align: justify;
-    
   }
 }
