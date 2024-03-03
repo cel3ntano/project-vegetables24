@@ -12,3 +12,21 @@
     refs.menu.classList.toggle('is-open');
   }
 })();
+
+function smoothScroll(target) {
+  const anchor = document.querySelector(target);
+  if (anchor) {
+    anchor.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+}
+
+document.querySelectorAll('a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = this.getAttribute('href');
+    smoothScroll(target);
+  });
+});
