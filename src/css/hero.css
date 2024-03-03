@@ -37,7 +37,11 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .hero .container {
-    background-image: url(/img/hero/hero-mob-2x.jpg);
+    background-image: linear-gradient(to bottom,
+        #576f35 0,
+        #576f35 calc(100% - 370px),
+        rgba(20, 20, 20, 0.2) calc(100% - 370px),
+        rgba(20, 20, 20, 0.2) 100%), url(/img/hero/hero-mob-2x.jpg);
   }
 }
 
