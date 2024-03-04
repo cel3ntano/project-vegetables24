@@ -1,5 +1,9 @@
+.reviews .container {
+  background-color: #fbfbfb;
+}
+
 .reviews-title-section {
-  width: 335px;
+  max-width: 335px;
 }
 .reviews-title {
   font-size: 48px;
@@ -35,14 +39,15 @@
   display: block;
 }
 
+.reviewers-info {
+  padding: 0 7px;
+}
+
 .reviewers-img {
-  border-radius: 100px;
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
   margin: 0 auto;
   margin-bottom: 24px;
 }
+
 .reviewers-info-name {
   color: #040306;
   text-align: center;
