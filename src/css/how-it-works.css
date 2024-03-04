@@ -174,7 +174,6 @@
   background-clip: content-box;
   counter-increment: my-counter;
 }
-
 .numbers::before {
   content: counter(my-counter);
 }
