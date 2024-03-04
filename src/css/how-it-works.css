@@ -123,6 +123,11 @@
   padding: 12px 24px;
   border-radius: 15px;
   background-color: #fbfbfb;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.numeric-item:hover {
+  background-color: rgba(240, 245, 240, 0.8);
 }
 
 @media screen and (min-width: 768px) {
