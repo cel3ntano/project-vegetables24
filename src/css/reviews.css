@@ -1,7 +1,133 @@
-.reviews {
-  background-color: rosybrown;
+.reviews .container {
+  background-color: #fbfbfb;
 }
 
-.reviews .container {
-  /* outline: 1px solid wheat; */
+.reviews-title-section {
+  max-width: 335px;
+}
+.reviews-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.customers-span {
+  color: #576f35;
+}
+.reviews-title-section-content {
+  color: #141414;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 40px;
+}
+
+.reviewers-ppl-list .reviewers-ppl-card {
+  display: none;
+}
+
+.reviewers-ppl-card {
+  border-radius: 24px;
+  border: 1px solid rgba(122, 49, 69, 0.3);
+  background: #fbfbfb;
+  padding: 20px 16px;
+}
+
+.reviewers-ppl-list .reviewers-ppl-card:first-child {
+  display: block;
+}
+
+.reviewers-info {
+  padding: 0 7px;
+}
+
+.reviewers-img {
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.reviewers-info-name {
+  color: #040306;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.reviewers-review {
+  color: rgba(4, 3, 6, 0.4);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-title-section {
+    max-width: 553px;
+  }
+
+  .reviews-title {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    margin-bottom: 25px;
+  }
+
+  .reviews-title-section-content {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 50px;
+  }
+
+  .reviewers-ppl-card {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reviewers-ppl-card {
+    width: 100%;
+    width: calc((100% - 18px) / 2);
+  }
+
+  .reviewers-ppl-list .reviewers-ppl-card:nth-child(-n + 2) {
+    display: block;
+  }
+
+  .reviewers-ppl-list {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+  }
+
+  .reviewers-info-name {
+    color: #141414;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .reviewers-review {
+    color: rgba(20, 20, 20, 0.4);
+    font-size: 16px;
+    line-height: 1.4;
+    width: 288px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reviewers-ppl-list .reviewers-ppl-card {
+    display: block;
+  }
+  .reviewers-ppl-list {
+    gap: 25px;
+  }
+
+  .reviewers-ppl-card {
+    width: 100%;
+    width: calc((100% - 50px) / 3);
+  }
 }
