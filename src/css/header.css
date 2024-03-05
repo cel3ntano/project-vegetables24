@@ -166,7 +166,7 @@
 
 .modal {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: #fbfbfb;
   position: absolute;
   top: 50%;

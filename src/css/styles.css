@@ -24,6 +24,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  background-image: linear-gradient(
+      rgba(73, 84, 47, 0.4),
+      rgba(73, 84, 47, 0.4)
+    ),
+    url(/img/grass.jpg);
+}
+
 .container {
   max-width: 375px;
   /* padding: 0 20px; */

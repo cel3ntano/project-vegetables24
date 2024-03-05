@@ -54,3 +54,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     smoothScroll(target);
   });
 });
+
+// window.addEventListener('scroll', function () {
+//   let scrolledX = window.scrollX;
+//   let scrolledY = window.scrollY;
+//   let background = document.querySelector('body');
+//   background.style.backgroundPosition =
+//     -(scrolledX * 0.1) + 'px ' + -(scrolledY * 0.1) + 'px'; // Изменяем позицию фонового изображения
+// });
