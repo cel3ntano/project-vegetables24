@@ -30,5 +30,8 @@
     <symbol id="checkbox-empty" viewBox="0 0 32 32">
       <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M4 1h24c1.657 0 3 1.343 3 3v24c0 1.657-1.343 3-3 3h-24c-1.657 0-3-1.343-3-3v-24c0-1.657 1.343-3 3-3z"></path>
     </symbol>
+        <symbol id="close" viewBox="0 0 32 32">
+      <path d="M32 3.223 28.777 0 16 12.777 3.223 0 0 3.223 12.777 16 0 28.777 3.223 32 16 19.223 28.777 32 32 28.777 19.223 16 32 3.223z"/>
+    </symbol>
   </defs>
 </svg>
