@@ -338,6 +338,15 @@
   .mob-menu {
     padding: 240px 82px 40px 82px;
   }
+  .modal-btn-sing {
+    min-width: 290px;
+    padding: 16px 60px;
+  }
+
+  .modal-btn {
+    min-width: 290px;
+    padding: 16px 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
