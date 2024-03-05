@@ -33,7 +33,7 @@
         </ul>
       </div>
     </nav>
-    <button type="button" class="header-btn">Shop now</button>
+    <button data-modal-open type="button" class="header-btn">Shop now</button>
     <button data-mobile-open type="button" class="open-menu-btn">
       <svg class="icon-menu" width="32" height="32">
         <use href="./img/icons.svg#menu-mob"></use>
@@ -67,14 +67,16 @@
           </li>
         </ul>
       </nav>
-      <button type="button" class="menu-btn" data-mobile-link>Shop now</button>
+      <button type="button" data-modal-open data-mobile-link class="menu-btn">
+        Shop now
+      </button>
     </div>
   </div>
 </header>
 <!-- ---------modal----------- -->
-<div class="backdrop-modal is-open-modal">
+<div data-modal class="backdrop-modal">
   <div class="modal">
-    <button type="button" class="modal-close">
+    <button data-modal-close type="button" class="modal-close">
       <svg class="modal-close-icon" width="32" height="32">
         <use href="./img/icons.svg#x-mob"></use>
       </svg>

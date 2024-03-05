@@ -1,35 +1,40 @@
 (() => {
-  const mobileMenu = document.querySelector('[data-mobile-menu]');
-  const openMenuBtn = document.querySelector('[data-mobile-open]');
-  const closeMenuBtn = document.querySelector('[data-mobile-close]');
-  // добавили доп класс что бы закрыть после нажатия на ссылку
-  const menuLinks = document.querySelectorAll('[data-mobile-link]');
-
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
-
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
+  const refs = {
+    openMenuBtn: document.querySelector('[data-mobile-open]'),
+    closeMenuBtn: document.querySelector('[data-mobile-close]'),
+    menu: document.querySelector('[data-mobile-menu]'),
+    menuLinks: document.querySelectorAll('[data-mobile-link]'),
   };
 
-  menuLinks.forEach(menuLink => {
-    menuLink.addEventListener('click', toggleMenu);
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+
+  refs.menuLinks.forEach(menuLink => {
+    menuLink.addEventListener('click', () => {
+      toggleMenu();
+    });
   });
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  function toggleMenu() {
+    refs.menu.classList.toggle('is-open');
+  }
+})();
 
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+(() => {
+  const refs = {
+    openModalBtns: document.querySelectorAll('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+  };
+
+  refs.openModalBtns.forEach(btn => {
+    btn.addEventListener('click', toggleModal);
   });
+  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-open-modal');
+  }
 })();
 
 function smoothScroll(target) {
