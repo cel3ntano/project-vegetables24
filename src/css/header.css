@@ -165,14 +165,13 @@
 }
 
 .modal {
-  width: 628px;
-  min-height: 557px;
+  width: 100vw;
+  height: 100vh;
   background-color: #fbfbfb;
-  border-radius: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 100px 100px 50px 100px;
+  padding: 100px 20px 40px 20px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -195,7 +194,7 @@
 .modal-title {
   color: #141414;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -223,7 +222,7 @@
   height: 52px;
   padding-left: 16px;
   border-radius: 30px;
-  border: 1px solid rgba(20, 20, 20, 0.2);
+  border: 1px solid rgba(20, 20, 20, 0.3);
   background-color: transparent;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -235,7 +234,7 @@
 
 .modal-input::placeholder {
   color: #5b5b5b;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -251,6 +250,8 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
 }
 
 .privacy-link {
@@ -290,7 +291,7 @@
 .modal-btn {
   color: #fbfbfb;
   background-color: #7a3145;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.11;
   letter-spacing: -0.015em;
@@ -299,7 +300,7 @@
   border: none;
   padding: 16px 80px;
   display: block;
-  min-width: 428px;
+  min-width: 338px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -312,7 +313,7 @@
 .modal-btn-sing {
   color: #fbfbfb;
   background-color: #576f35;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.11;
   letter-spacing: -0.015em;
@@ -321,7 +322,7 @@
   border: none;
   padding: 16px 80px;
   display: block;
-  min-width: 428px;
+  min-width: 338px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -396,6 +397,20 @@
     padding: 16px 32px;
     max-width: 157px;
   }
+  /* -------------------------- */
+  .modal {
+    width: 440px;
+    height: 600px;
+    border-radius: 30px;
+    padding: 90px 50px 25px 50px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-field-check {
+  }
 }
 
 /* -------------------------------------- */
@@ -469,5 +484,29 @@
 
   .backdrop {
     display: none;
+  }
+  /* -------------------------- */
+  .modal {
+    width: 628px;
+    min-height: 557px;
+    padding: 100px 100px 50px 100px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .modal-input::placeholder {
+    font-size: 16px;
+  }
+
+  .modal-btn {
+    font-size: 18px;
+    min-width: 428px;
+  }
+
+  .modal-btn-sing {
+    font-size: 18px;
+    min-width: 428px;
   }
 }
