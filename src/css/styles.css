@@ -81,3 +81,27 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@media only screen and (max-width: 768px) {
+  HTML,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}

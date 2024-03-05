@@ -77,3 +77,15 @@ btn.on('click', function (e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, '300');
 });
+
+// disable header animation on desktop
+document.addEventListener('DOMContentLoaded', function () {
+  var header = document.querySelector('.header');
+  if (window.innerWidth <= 767) {
+    header.setAttribute('data-aos', 'fade-down');
+    AOS.refresh();
+  } else {
+    header.removeAttribute('data-aos');
+    AOS.refresh();
+  }
+});
