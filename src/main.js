@@ -62,3 +62,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //   background.style.backgroundPosition =
 //     -(scrolledX * 0.1) + 'px ' + -(scrolledY * 0.1) + 'px'; // Изменяем позицию фонового изображения
 // });
+
+var btn = $('#backToTop');
+
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, '300');
+});

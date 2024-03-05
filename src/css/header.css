@@ -41,6 +41,7 @@
 /* -------mobail_menu----------  */
 
 .backdrop {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -518,4 +519,41 @@
     font-size: 18px;
     min-width: 428px;
   }
+}
+/* back to top button */
+
+#backToTop {
+  display: inline-block;
+  background-color: #7a3145;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#backToTop::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#backToTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#backToTop:active {
+  background-color: #555;
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
 }
