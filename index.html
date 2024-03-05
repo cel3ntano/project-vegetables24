@@ -20,7 +20,7 @@
     />
     
     <script type="module" crossorigin src="/project-vegetables24/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-vegetables24/assets/index-c6616ce1.css">
+    <link rel="stylesheet" href="/project-vegetables24/assets/index-a64ddf79.css">
   </head>
   <body>
     <header class="header">
@@ -96,6 +96,72 @@
     </div>
   </div>
 </header>
+<!-- ---------modal----------- -->
+<div class="backdrop-modal is-open-modal">
+  <div class="modal">
+    <button type="button" class="modal-close">
+      <svg class="modal-close-icon" width="32" height="32">
+        <use href="/project-vegetables24/assets/icons-1af960f7.svg#x-mob"></use>
+      </svg>
+    </button>
+    <p class="modal-title">
+      create <span class="account">a new account</span> or
+      <span class="sing">sign in</span>
+    </p>
+    <form class="modal-form">
+      <div class="modal-list">
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            name="user-name"
+            class="modal-input"
+            placeholder="User name"
+          />
+        </div>
+        <div class="modal-input-wrap">
+          <input
+            type="password"
+            name="password"
+            class="modal-input"
+            placeholder="Password"
+          />
+        </div>
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            name="invitation-code"
+            class="modal-input"
+            placeholder="Do you have an invitation code? Paste it here"
+          />
+        </div>
+      </div>
+      <div class="modal-field-check">
+        <input
+          type="checkbox"
+          name="user-privacy"
+          id="user-privacy"
+          class="form-check visually-hidden"
+          value="true"
+        />
+        <label class="check-text">
+          <span class="check-part">
+            <svg class="check-icon" width="10" height="8">
+              <use href="../img/icons.svg#"></use>
+            </svg>
+          </span>
+          <span>
+            I accept the terms and conditions of the
+            <a class="privacy-link" href="">Privacy Policy</a>
+          </span>
+        </label>
+      </div>
+      <div class="modal-btn-send">
+        <button type="submit" class="modal-btn">create account</button>
+        <button type="submit" class="modal-btn-sing">sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
 
     <main>
       <section class="hero section">
