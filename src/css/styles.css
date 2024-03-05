@@ -105,3 +105,12 @@ body {
 .aos-init[data-aos][data-aos].aos-animate {
   transform: unset;
 }
+
+@media (max-width: 767px) {
+  [data-aos='fade-right'],
+  [data-aos='fade-left'],
+  [data-aos='fade-down'] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
