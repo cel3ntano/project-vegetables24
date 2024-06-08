@@ -40,11 +40,11 @@
     refs.modal.classList.toggle('is-open-modal');
     refs.body.classList.toggle('scroll-disabled');
     refs.html.classList.toggle('scroll-disabled');
-    // if (refs.modal.classList.contains('is-open-modal')) {
-    //   applyScrollbarWidth();
-    // } else {
-    //   removeScrollbarWidth();
-    // }
+    if (refs.modal.classList.contains('is-open-modal')) {
+      applyScrollbarWidth();
+    } else {
+      removeScrollbarWidth();
+    }
   }
 })();
 
@@ -96,30 +96,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // modal-open scroll lock
 
-// const headerContainer = document.querySelector('.header .container');
+const headerContainer = document.querySelector('.header .container');
+const modal = document.querySelector('.modal');
 
-// function getScrollbarWidth() {
-//   const scrollDiv = document.createElement('div');
-//   scrollDiv.style.cssText =
-//     'width: 100px; height: 100px; overflow: scroll; position: absolute; top: -9999px;';
-//   document.body.appendChild(scrollDiv);
-//   const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-//   document.body.removeChild(scrollDiv);
-//   return scrollbarWidth;
-// }
+function getScrollbarWidth() {
+  const scrollDiv = document.createElement('div');
+  scrollDiv.style.cssText =
+    'width: 100px; height: 100px; overflow: scroll; position: absolute; top: -9999px;';
+  document.body.appendChild(scrollDiv);
+  const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  document.body.removeChild(scrollDiv);
+  return scrollbarWidth;
+}
 
-// function applyScrollbarWidth() {
-//   const scrollbarWidth = getScrollbarWidth();
-//   document.body.style.paddingRight = scrollbarWidth + 'px';
-//   document.body.style.overflow = 'hidden';
-//   headerContainer.style.right = getScrollbarWidth() + 'px';
-// }
+function applyScrollbarWidth() {
+  const scrollbarWidth = getScrollbarWidth();
+  document.body.style.paddingRight = scrollbarWidth + 'px';
+  headerContainer.style.left = `calc(50% - ${scrollbarWidth / 2}px)`;
+  modal.style.marginLeft = `-${scrollbarWidth / 2}px`;
+}
 
-// function removeScrollbarWidth() {
-//   document.body.style.paddingRight = '';
-//   document.body.style.overflow = '';
-//   headerContainer.style.right = '0';
-// }
+function removeScrollbarWidth() {
+  document.body.style.paddingRight = '';
+  headerContainer.style.left = '50%';
+  modal.style.marginLeft = '0';
+}
 //
 // window.addEventListener('scroll', function () {
 //   let scrolledX = window.scrollX;
