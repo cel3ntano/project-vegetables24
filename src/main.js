@@ -1,3 +1,4 @@
+// mobile menu
 (() => {
   const refs = {
     openMenuBtn: document.querySelector('[data-mobile-open]'),
@@ -20,11 +21,14 @@
   }
 })();
 
+// modal
 (() => {
   const refs = {
     openModalBtns: document.querySelectorAll('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
+    body: document.querySelector('body'),
+    html: document.querySelector('html'),
   };
 
   refs.openModalBtns.forEach(btn => {
@@ -34,9 +38,17 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-open-modal');
+    refs.body.classList.toggle('scroll-disabled');
+    refs.html.classList.toggle('scroll-disabled');
+    if (refs.modal.classList.contains('is-open-modal')) {
+      applyScrollbarWidth();
+    } else {
+      removeScrollbarWidth();
+    }
   }
 })();
 
+// smooth scroll
 function smoothScroll(target) {
   const anchor = document.querySelector(target);
   if (anchor) {
@@ -55,15 +67,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// window.addEventListener('scroll', function () {
-//   let scrolledX = window.scrollX;
-//   let scrolledY = window.scrollY;
-//   let background = document.querySelector('body');
-//   background.style.backgroundPosition =
-//     -(scrolledX * 0.1) + 'px ' + -(scrolledY * 0.1) + 'px'; // Изменяем позицию фонового изображения
-// });
-
-var btn = $('#backToTop');
+const btn = $('#backToTop');
 
 $(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
@@ -89,3 +93,38 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.refresh();
   }
 });
+
+// modal-open scroll lock
+
+// const headerContainer = document.querySelector('.header .container');
+
+// function getScrollbarWidth() {
+//   const scrollDiv = document.createElement('div');
+//   scrollDiv.style.cssText =
+//     'width: 100px; height: 100px; overflow: scroll; position: absolute; top: -9999px;';
+//   document.body.appendChild(scrollDiv);
+//   const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+//   document.body.removeChild(scrollDiv);
+//   return scrollbarWidth;
+// }
+
+// function applyScrollbarWidth() {
+//   const scrollbarWidth = getScrollbarWidth();
+//   document.body.style.paddingRight = scrollbarWidth + 'px';
+//   document.body.style.overflow = 'hidden';
+//   headerContainer.style.right = getScrollbarWidth() + 'px';
+// }
+
+// function removeScrollbarWidth() {
+//   document.body.style.paddingRight = '';
+//   document.body.style.overflow = '';
+//   headerContainer.style.right = '0';
+// }
+//
+// window.addEventListener('scroll', function () {
+//   let scrolledX = window.scrollX;
+//   let scrolledY = window.scrollY;
+//   let background = document.querySelector('body');
+//   background.style.backgroundPosition =
+//     -(scrolledX * 0.1) + 'px ' + -(scrolledY * 0.1) + 'px'; // Изменяем позицию фонового изображения
+// });

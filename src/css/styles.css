@@ -114,3 +114,7 @@ body {
     transform: translateY(50px);
   }
 }
+.scroll-disabled {
+  overflow: hidden;
+  /* position: fixed; */
+}
