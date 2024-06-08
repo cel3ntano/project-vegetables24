@@ -40,11 +40,11 @@
     refs.modal.classList.toggle('is-open-modal');
     refs.body.classList.toggle('scroll-disabled');
     refs.html.classList.toggle('scroll-disabled');
-    if (refs.modal.classList.contains('is-open-modal')) {
-      applyScrollbarWidth();
-    } else {
-      removeScrollbarWidth();
-    }
+    // if (refs.modal.classList.contains('is-open-modal')) {
+    //   applyScrollbarWidth();
+    // } else {
+    //   removeScrollbarWidth();
+    // }
   }
 })();
 
