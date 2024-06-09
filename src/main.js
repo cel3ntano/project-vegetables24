@@ -5,6 +5,8 @@
     closeMenuBtn: document.querySelector('[data-mobile-close]'),
     menu: document.querySelector('[data-mobile-menu]'),
     menuLinks: document.querySelectorAll('[data-mobile-link]'),
+    body: document.querySelector('body'),
+    html: document.querySelector('html'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
@@ -18,6 +20,8 @@
 
   function toggleMenu() {
     refs.menu.classList.toggle('is-open');
+    refs.body.classList.toggle('scroll-disabled');
+    refs.html.classList.toggle('scroll-disabled');
   }
 })();
 
