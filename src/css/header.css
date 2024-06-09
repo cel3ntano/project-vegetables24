@@ -567,3 +567,12 @@
   opacity: 1;
   visibility: visible;
 }
+@media (min-height: 344px) and (max-height: 853px) and (min-width: 667px) and (max-width: 1368px) {
+  .mob-menu {
+    padding: 80px 0 40px 0;
+  }
+
+  .menu-navigation-list {
+    margin-bottom: 0;
+  }
+}

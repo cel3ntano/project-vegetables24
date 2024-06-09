@@ -56,6 +56,11 @@
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.42px;
+  transition: color 300ms;
+}
+
+.footer-nav-item:hover {
+  color: #ffffff90;
 }
 
 .footer-nav-item:not(:last-child) {
@@ -69,6 +74,11 @@
 .footer-contacts-item {
   font-weight: 600;
   letter-spacing: -0.21px;
+  transition: color 300ms;
+}
+
+.footer-contacts-item:hover {
+  color: #ffffff90;
 }
 
 .footer-contacts-item:not(:last-child) {
