@@ -127,6 +127,16 @@ function applyScrollbarWidth() {
     document.body.style.paddingRight = scrollbarWidth + 'px';
     headerContainer.style.left = `calc(50% - ${scrollbarWidth / 2}px)`;
     modal.style.marginLeft = `-${scrollbarWidth / 2}px`;
+    if (
+      headerContainer.classList.contains('is-sticky') &&
+      window.innerWidth >= 1280
+    ) {
+      const headerSticky = document.querySelector(
+        '.header .container.is-sticky'
+      );
+      headerSticky.style.left = `calc(50% - ${scrollbarWidth / 2}px)`;
+      headerSticky.style.transition = 'none';
+    }
   }
 }
 
@@ -140,16 +150,37 @@ function removeScrollbarWidth() {
     headerContainer.style.left = '50%';
     modal.style.marginLeft = '0';
   }
+  if (
+    headerContainer.classList.contains('is-sticky') &&
+    window.innerWidth >= 1280
+  ) {
+    const headerSticky = document.querySelector('.header .container.is-sticky');
+    headerSticky.style.left = '50%';
+    headerSticky.style.transition = 'none';
+    setTimeout(() => {
+      headerSticky.style.transition = 'all 0.3s ease';
+    }, 100);
+  }
 }
 
-window.addEventListener('resize', () => {
-  if (
-    window.innerWidth >= 768 &&
-    window.innerHeight > 599 &&
-    !isMobileDevice()
-  ) {
-    applyScrollbarWidth();
+// window.addEventListener('resize', () => {
+//   if (
+//     window.innerWidth >= 768 &&
+//     window.innerHeight > 599 &&
+//     !isMobileDevice()
+//   ) {
+//     applyScrollbarWidth();
+//   } else {
+//     removeScrollbarWidth();
+//   }
+// });
+//
+//
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('.header .container');
+  if (window.scrollY > 0) {
+    header.classList.add('is-sticky');
   } else {
-    removeScrollbarWidth();
+    header.classList.remove('is-sticky');
   }
 });
