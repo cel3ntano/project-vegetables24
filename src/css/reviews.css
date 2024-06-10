@@ -25,7 +25,7 @@
 }
 
 .reviewers-ppl-list .reviewers-ppl-card {
-  display: none;
+  /* display: none; */
 }
 
 .reviewers-ppl-card {
@@ -101,7 +101,7 @@
   .reviewers-ppl-list {
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    /* gap: 18px; */
   }
 
   .reviewers-info-name {
@@ -123,11 +123,23 @@
     display: block;
   }
   .reviewers-ppl-list {
-    gap: 25px;
+    /* gap: 25px; */
   }
 
   .reviewers-ppl-card {
     width: 100%;
     width: calc((100% - 50px) / 3);
   }
+}
+
+.swiper-wrapper {
+  margin-bottom: 35px;
+}
+
+/* .swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: #576f35;
+} */
+
+.swiper-pagination-bullet-active {
+  --swiper-pagination-color: #7a3145;
 }
