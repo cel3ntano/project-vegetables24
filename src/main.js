@@ -103,6 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
 const headerContainer = document.querySelector('.header .container');
 const modal = document.querySelector('.modal');
 
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 function getScrollbarWidth() {
   const scrollDiv = document.createElement('div');
   scrollDiv.style.cssText =
@@ -114,22 +118,38 @@ function getScrollbarWidth() {
 }
 
 function applyScrollbarWidth() {
-  const scrollbarWidth = getScrollbarWidth();
-  document.body.style.paddingRight = scrollbarWidth + 'px';
-  headerContainer.style.left = `calc(50% - ${scrollbarWidth / 2}px)`;
-  modal.style.marginLeft = `-${scrollbarWidth / 2}px`;
+  if (
+    window.innerWidth >= 768 &&
+    window.innerHeight > 599 &&
+    !isMobileDevice()
+  ) {
+    const scrollbarWidth = getScrollbarWidth();
+    document.body.style.paddingRight = scrollbarWidth + 'px';
+    headerContainer.style.left = `calc(50% - ${scrollbarWidth / 2}px)`;
+    modal.style.marginLeft = `-${scrollbarWidth / 2}px`;
+  }
 }
 
 function removeScrollbarWidth() {
-  document.body.style.paddingRight = '';
-  headerContainer.style.left = '50%';
-  modal.style.marginLeft = '0';
+  if (
+    window.innerWidth >= 768 &&
+    window.innerHeight > 599 &&
+    !isMobileDevice()
+  ) {
+    document.body.style.paddingRight = '';
+    headerContainer.style.left = '50%';
+    modal.style.marginLeft = '0';
+  }
 }
-//
-// window.addEventListener('scroll', function () {
-//   let scrolledX = window.scrollX;
-//   let scrolledY = window.scrollY;
-//   let background = document.querySelector('body');
-//   background.style.backgroundPosition =
-//     -(scrolledX * 0.1) + 'px ' + -(scrolledY * 0.1) + 'px'; // Изменяем позицию фонового изображения
-// });
+
+window.addEventListener('resize', () => {
+  if (
+    window.innerWidth >= 768 &&
+    window.innerHeight > 599 &&
+    !isMobileDevice()
+  ) {
+    applyScrollbarWidth();
+  } else {
+    removeScrollbarWidth();
+  }
+});

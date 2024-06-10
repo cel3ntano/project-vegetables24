@@ -38,7 +38,7 @@
   border: none;
 }
 
-/* -------mobail_menu----------  */
+/* ========================= Mobile Menu =========================  */
 
 .backdrop {
   z-index: 999;
@@ -144,7 +144,7 @@
   color: rgba(122, 49, 69, 0.7);
 }
 
-/* -------------modal------------------ */
+/* ============================ Modal ============================= */
 
 .backdrop-modal {
   padding: 10px 20px;
@@ -155,7 +155,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(20, 20, 20, 0.4); */
   background-image: radial-gradient(
     circle at center,
     rgba(41, 98, 33, 0.4) 15%,
@@ -175,15 +174,12 @@
 }
 
 .modal {
-  width: 100vw;
+  position: relative;
   min-height: 100svh;
-  background-color: #fbfbfb;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
-  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
   padding: 100px 20px 40px 20px;
+  background-color: #fbfbfb;
+  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -348,7 +344,7 @@
   background-color: #4a5f2d;
 }
 
-/* =============MEDIA==================== */
+/* =============================== MEDIA =================================== */
 
 @media screen and (max-width: 374px) {
   .mob-menu {
@@ -422,12 +418,26 @@
     padding: 16px 32px;
     max-width: 157px;
   }
-  /* -------------------------- */
+  /* ========================= Modal Adaptive ========================= */
+
+  @media (max-width: 767px) or (max-height: 599px) {
+    .modal {
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (min-height: 600px) {
+    .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 
   .modal {
     width: 440px;
     min-height: 600px;
-    /* min-height: 100vh; */
     border-radius: 20px;
     padding: 90px 50px 25px 50px;
   }
@@ -440,7 +450,7 @@
   }
 }
 
-/* -------------------------------------- */
+/* ======================== Desktop ============================= */
 
 @media screen and (min-width: 1280px) {
   .header .container {
@@ -512,7 +522,8 @@
   .backdrop {
     display: none;
   }
-  /* -------------------------- */
+
+  /* ============================= Modal Desktop ================================= */
   .modal {
     width: 628px;
     min-height: 557px;
