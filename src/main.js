@@ -229,3 +229,5 @@ import 'aos/dist/aos.css';
 AOS.init({
   once: true,
 });
+
+import 'animate.css';

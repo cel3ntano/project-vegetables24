@@ -7,6 +7,10 @@
 @import url('./reviews.css');
 @import url('./your-order.css');
 @import url('./footer.css');
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('../fonts/InterTight-VariableFont_wght.ttf') format('woff2');
+}
 
 :root {
   font-family: Inter Tight, Avenir, Helvetica, Arial, sans-serif;
