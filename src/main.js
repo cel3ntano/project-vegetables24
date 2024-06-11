@@ -1,3 +1,9 @@
+import 'modern-normalize/modern-normalize.css';
+import $ from 'jquery';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import 'animate.css';
+
 // mobile menu
 (() => {
   const refs = {
@@ -224,10 +230,10 @@ const swiper = new Swiper('.swiper', {
 });
 
 //
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 AOS.init({
   once: true,
 });
-
-import 'animate.css';
+// const { JSDOM } = require('jsdom');
+// const { window } = new JSDOM('');
+// const $ = require('jquery')(window);
